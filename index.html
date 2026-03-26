@@ -11,8 +11,8 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy:   #0D1F6E;
-      --navy-dark: #091559;
+      --navy:   #1a1a1a;
+      --navy-dark: #0f0f0f;
       --green:  #1D6B3B;
       --white:  #ffffff;
       --off-white: #F4F6FB;
@@ -30,7 +30,7 @@
     nav {
       position: sticky;
       top: 0;
-      background: rgba(13,31,110,0.97);
+      background: rgba(26,26,26,0.97);
       padding: 12px 24px;
     }
 
@@ -60,7 +60,7 @@
 
     /* HERO */
     .hero {
-      background: linear-gradient(135deg,#091559,#0D1F6E);
+      background: linear-gradient(135deg, var(--navy-dark), var(--navy));
       color: white;
       text-align: center;
       padding: 60px 20px;
@@ -110,7 +110,7 @@
 
     /* FOOTER */
     footer {
-      background: #091559;
+      background: var(--navy-dark);
       color: rgba(255,255,255,0.7);
       text-align: center;
       padding: 30px;
@@ -138,7 +138,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <img src="logo.jpg" class="hero-logo">
+  <img src="logomegatic.jpg" class="hero-logo">
 
   <h1>Plateforme Éducative</h1>
 

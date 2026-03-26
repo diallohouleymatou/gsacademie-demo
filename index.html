@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GS Académie – Présentation</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>GS ACADEMIE – Présentation</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -14,390 +14,189 @@
       --navy:   #0D1F6E;
       --navy-dark: #091559;
       --green:  #1D6B3B;
-      --green-light: #24854A;
       --white:  #ffffff;
       --off-white: #F4F6FB;
       --gray:   #64748B;
       --border: #E2E8F0;
     }
 
-    html { scroll-behavior: smooth; }
-
     body {
       font-family: 'Inter', sans-serif;
       background: var(--off-white);
       color: #0F172A;
-      line-height: 1.6;
     }
 
-    /* ── NAVBAR ─────────────────────────────────── */
+    /* NAVBAR */
     nav {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(13, 31, 110, 0.97);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .nav-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .nav-inner img {
-      height: 44px;
-      width: 44px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid rgba(255,255,255,0.25);
-    }
-    .nav-title {
-      color: #fff;
-      font-size: 17px;
-      font-weight: 700;
-      letter-spacing: 0.01em;
-    }
-    .nav-subtitle {
-      color: rgba(255,255,255,0.55);
-      font-size: 12px;
-      font-weight: 400;
-      margin-top: 1px;
-    }
-    .nav-links {
-      margin-left: auto;
-      display: flex;
-      gap: 8px;
-    }
-    .nav-links a {
-      color: rgba(255,255,255,0.7);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 500;
-      padding: 6px 14px;
-      border-radius: 6px;
-      transition: all 0.2s;
-    }
-    .nav-links a:hover {
-      background: rgba(255,255,255,0.1);
-      color: #fff;
+      background: rgba(13,31,110,0.97);
+      padding: 12px 24px;
     }
 
-    /* ── HERO ────────────────────────────────────── */
-    .hero {
-      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 55%, #1D3A8A 100%);
-      color: #fff;
-      padding: 72px 24px 80px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+    .nav-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      pointer-events: none;
-    }
-    .hero-logo {
-      width: 110px;
-      height: 110px;
+
+    .nav-inner img {
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid rgba(255,255,255,0.3);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-      margin-bottom: 24px;
     }
-    .hero h1 {
-      font-size: clamp(28px, 5vw, 48px);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      line-height: 1.15;
-      margin-bottom: 12px;
+
+    .nav-title { color: #fff; font-weight: 700; }
+    .nav-subtitle { color: rgba(255,255,255,0.6); font-size: 12px; }
+
+    .nav-links { margin-left: auto; }
+    .nav-links a {
+      color: #fff;
+      margin-left: 12px;
+      text-decoration: none;
     }
-    .hero h1 span {
-      color: #7DD3A8;
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg,#091559,#0D1F6E);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
     }
-    .hero p {
-      font-size: 16px;
-      color: rgba(255,255,255,0.7);
-      max-width: 520px;
-      margin: 0 auto 28px;
+
+    .hero-logo {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 20px;
     }
+
+    .hero h1 { font-size: 32px; margin-bottom: 10px; }
+
     .hero-badges {
       display: flex;
       justify-content: center;
       gap: 10px;
       flex-wrap: wrap;
+      margin-top: 20px;
     }
+
     .badge {
       background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.15);
-      color: rgba(255,255,255,0.85);
+      padding: 6px 12px;
+      border-radius: 20px;
       font-size: 12px;
-      font-weight: 500;
-      padding: 5px 14px;
-      border-radius: 100px;
-    }
-    .badge.green {
-      background: rgba(29, 107, 59, 0.4);
-      border-color: rgba(29, 107, 59, 0.6);
-      color: #7DD3A8;
     }
 
-    /* ── MAIN CONTENT ───────────────────────────── */
+    /* MAIN */
     main {
       max-width: 1100px;
-      margin: 0 auto;
-      padding: 64px 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 64px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
-    /* ── VIDEO SECTION ──────────────────────────── */
     .video-section {
-      background: #fff;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
-      border: 1px solid var(--border);
-      transition: box-shadow 0.3s;
-    }
-    .video-section:hover {
-      box-shadow: 0 8px 32px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06);
-    }
-
-    .section-header {
-      padding: 32px 36px 24px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-    }
-    .section-icon {
-      width: 48px;
-      height: 48px;
+      background: white;
+      margin-bottom: 40px;
       border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .section-icon.navy { background: rgba(13, 31, 110, 0.08); }
-    .section-icon.green-bg { background: rgba(29, 107, 59, 0.08); }
-    .section-icon svg { width: 24px; height: 24px; }
-
-    .section-meta {}
-    .section-tag {
-      font-size: 11px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 4px;
-    }
-    .section-tag.navy { color: var(--navy); }
-    .section-tag.green { color: var(--green); }
-    .section-meta h2 {
-      font-size: clamp(18px, 2.5vw, 24px);
-      font-weight: 700;
-      color: #0F172A;
-      line-height: 1.3;
-      margin-bottom: 6px;
-    }
-    .section-meta p {
-      font-size: 14px;
-      color: var(--gray);
-      max-width: 600px;
+      padding: 20px;
     }
 
-    .video-wrapper {
-      padding: 28px 36px 36px;
-      background: #FAFBFD;
-    }
-    .video-container {
-      border-radius: 12px;
-      overflow: hidden;
-      background: #000;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-      position: relative;
-      line-height: 0;
-    }
-    .video-container video {
+    video {
       width: 100%;
-      display: block;
-      aspect-ratio: 16/10;
-      object-fit: contain;
-      background: #000;
+      border-radius: 10px;
     }
 
-    /* ── FOOTER ─────────────────────────────────── */
+    /* FOOTER */
     footer {
-      background: var(--navy-dark);
-      color: rgba(255,255,255,0.6);
+      background: #091559;
+      color: rgba(255,255,255,0.7);
       text-align: center;
-      padding: 36px 24px;
-      font-size: 13px;
+      padding: 30px;
     }
-    footer strong {
-      color: #fff;
-    }
+
     .footer-contact {
       display: flex;
-      justify-content: center;
-      gap: 24px;
       flex-wrap: wrap;
-      margin-bottom: 12px;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 10px;
     }
+
     .footer-contact a {
-      color: rgba(255,255,255,0.6);
+      color: white;
       text-decoration: none;
-      transition: color 0.2s;
-    }
-    .footer-contact a:hover { color: #fff; }
-    .footer-divider {
-      width: 40px;
-      height: 2px;
-      background: var(--green);
-      margin: 0 auto 16px;
-      border-radius: 2px;
     }
 
-    /* ── SCROLL REVEAL ──────────────────────────── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ── RESPONSIVE ─────────────────────────────── */
-    @media (max-width: 640px) {
-      .section-header { padding: 24px 20px 18px; flex-direction: column; gap: 10px; }
-      .video-wrapper { padding: 18px 20px 24px; }
-      .nav-links { display: none; }
-      main { padding: 40px 16px; gap: 40px; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .reveal { opacity: 1; transform: none; transition: none; }
-    }
   </style>
 </head>
+
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="nav-inner">
-      <img src="logo.jpg" alt="Logo GS L'Académie" />
-      <div>
-        <div class="nav-title">GS L'Académie</div>
-        <div class="nav-subtitle">Santé · Éducation · Justice</div>
-      </div>
-      <div class="nav-links">
-        <a href="#app">Application</a>
-        <a href="#site">Site Web</a>
-      </div>
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <img src="logo.jpg" alt="logo">
+    <div>
+      <div class="nav-title">GS ACADEMIE</div>
+      <div class="nav-subtitle">Santé · Éducation · Justice</div>
     </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <img src="logo.jpg" alt="Logo GS L'Académie" class="hero-logo" />
-    <h1>Groupe Scolaire<br /><span>L'Académie</span></h1>
-    <p>Découvrez nos solutions numériques — l'application de gestion scolaire et la vitrine en ligne de notre établissement.</p>
-    <div class="hero-badges">
-      <span class="badge">Cité Guentaba 1 / Fadia</span>
-      <span class="badge green">Gestion scolaire numérique</span>
-      <span class="badge">Tél. 33 835 51 61</span>
+    <div class="nav-links">
+      <a href="#app">Application</a>
+      <a href="#site">Site Web</a>
     </div>
-  </section>
+  </div>
+</nav>
 
-  <!-- MAIN -->
-  <main>
+<!-- HERO -->
+<section class="hero">
+  <img src="logo.jpg" class="hero-logo">
 
-    <!-- VIDEO 1 : Application de gestion scolaire -->
-    <div class="video-section reveal" id="app">
-      <div class="section-header">
-        <div class="section-icon navy">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#0D1F6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="3" width="20" height="14" rx="2"/>
-            <path d="M8 21h8M12 17v4"/>
-          </svg>
-        </div>
-        <div class="section-meta">
-          <div class="section-tag navy">Vidéo 1</div>
-          <h2>Application de Gestion Scolaire</h2>
-          <p>Présentation complète de l'outil numérique développé pour piloter et simplifier la gestion administrative et pédagogique de GS L'Académie.</p>
-        </div>
-      </div>
-      <div class="video-wrapper">
-        <div class="video-container">
-          <video controls preload="metadata" poster="">
-            <source src="video2.mp4" type="video/mp4" />
-            Votre navigateur ne supporte pas la lecture vidéo.
-          </video>
-        </div>
-      </div>
-    </div>
+  <h1>GS ACADEMIE</h1>
 
-    <!-- VIDEO 2 : Présentation du site web -->
-    <div class="video-section reveal" id="site">
-      <div class="section-header">
-        <div class="section-icon green-bg">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#1D6B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-          </svg>
-        </div>
-        <div class="section-meta">
-          <div class="section-tag green">Vidéo 2</div>
-          <h2>Site Web de l'École</h2>
-          <p>Découverte du site officiel de GS L'Académie — une vitrine moderne présentant l'établissement, ses formations et ses actualités.</p>
-        </div>
-      </div>
-      <div class="video-wrapper">
-        <div class="video-container">
-          <video controls preload="metadata">
-            <source src="video1.mp4" type="video/mp4" />
-            Votre navigateur ne supporte pas la lecture vidéo.
-          </video>
-        </div>
-      </div>
-    </div>
+  <p>Découvrez nos solutions numériques — application de gestion scolaire et site web officiel.</p>
 
-  </main>
+  <div class="hero-badges">
+    <span class="badge">Cité Guentaba 1 N°196, Rue GS 25, Guédiawaye</span>
+    <span class="badge">Gestion scolaire numérique</span>
+    <span class="badge">33 835 51 61 / 77 645 34 34</span>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-divider"></div>
-    <div class="footer-contact">
-      <a href="tel:+221338355161">Tél. 33 835 51 61</a>
-      <a href="tel:+221776453434">77 645 34 34</a>
-      <span>Cité Guentaba 1 / Fadia</span>
-    </div>
-    <p><strong>Groupe Scolaire L'Académie</strong> — Santé · Éducation · Justice</p>
-    <p style="margin-top:6px;font-size:11px;opacity:0.4;">© 2026 GS L'Académie. Tous droits réservés.</p>
-  </footer>
+<!-- MAIN -->
+<main>
 
-  <script>
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
+  <div class="video-section" id="app">
+    <h2>Application de Gestion Scolaire</h2>
+    <video controls>
+      <source src="video2.mp4" type="video/mp4">
+    </video>
+  </div>
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
+  <div class="video-section" id="site">
+    <h2>Site Web de l'École</h2>
+    <video controls>
+      <source src="video1.mp4" type="video/mp4">
+    </video>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer-contact">
+    <a href="tel:+221338355161">33 835 51 61</a>
+    <a href="tel:+221776453434">77 645 34 34</a>
+    <a href="tel:+221775739997">77 573 99 97</a>
+    <a href="mailto:gsacademie01@gmail.com">gsacademie01@gmail.com</a>
+    <span>Cité Guentaba 1 N°196, Rue GS 25, Guédiawaye</span>
+  </div>
+
+  <p><strong>GS ACADEMIE</strong> — Santé · Éducation · Justice</p>
+
+</footer>
+
 </body>
 </html>
